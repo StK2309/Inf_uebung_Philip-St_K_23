@@ -13,8 +13,6 @@ package rekursion
 // DigitSum(n) = letzte Ziffer + DigitSum(alle anderen Ziffern)
 // z.B. DigitSum(123) = 3 + DigitSum(12)
 func DigitSum(n int) int {
-	if(n==0){
-		return 0
-	}
-	return n%10 + DigitSum(n/10)
+	//TODO
+	return 0
 }

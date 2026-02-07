@@ -16,25 +16,11 @@ package rekursion
 // Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)
 // mit den Basisfällen: Fibonacci(0) = 0, Fibonacci(1) = 1
 func Fibonacci2(n int) int {
-	if n<=1 {
-		return n
-	}
-	return Fibonacci2(n-1)+Fibonacci2(n-2)
+	//TODO Fibonacci in recursiv
+	return 0
 }
 
 func Fibonacci(n int) int {
-	var fibn1 = 1
-	var fibn2 = 0
-	var next int
-	
-	if n==0 {return fibn2}
-	if n==1 {return fibn1}
-	
-
-	for i := 1; i < n; i++ {
-		next = fibn1 + fibn2
-		fibn2 = fibn1
-		fibn1 = next
-	}
-	return next
+	//TODO
+	return 0
 }
