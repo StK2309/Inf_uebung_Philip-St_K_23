@@ -9,7 +9,6 @@ type BankAccount struct {
 
 // Deposit erhöht den Kontostand um den angegebenen Betrag
 func (b *BankAccount) Deposit(amount float64) {
-	b.Balance += amount
 	// TODO: Betrag zum Kontostand addieren
 }
 
@@ -17,10 +16,6 @@ func (b *BankAccount) Deposit(amount float64) {
 // wenn genug Guthaben vorhanden ist. Gibt true zurück, wenn erfolgreich,
 // sonst false.
 func (b *BankAccount) Withdraw(amount float64) bool {
-	if amount<b.Balance{
-		b.Balance-= amount
-		return true
-	}
 	// TODO: Nur abheben, wenn genug Guthaben
 	return false // Platzhalter
 }

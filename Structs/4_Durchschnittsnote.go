@@ -1,7 +1,5 @@
 package structs
 
-import "fmt"
-
 // Struct zur Darstellung einer Bewertung
 type Rating struct {
 	Name  string // Name der bewertenden Person
@@ -11,12 +9,5 @@ type Rating struct {
 // AverageScore berechnet den Durchschnittswert aller Bewertungen
 func AverageScore(ratings []Rating) float64 {
 	// TODO: Implementieren
-	var Total int
-	var average float64
-	if len(ratings)==0 {
-		return 0.0
-	}
-	fmt.Println(Total)
-
-	return average // Platzhalter
+	return 0.1 // Platzhalter
 }
