@@ -14,7 +14,7 @@ func ExampleCountLetterNested() {
 	fmt.Println(CountLetterNested(input, 'x'))
 
 	// Output:
-	// 7
-	// 3
+	// 9
+	// 4
 	// 0
 }

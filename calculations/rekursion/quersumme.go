@@ -14,5 +14,8 @@ package rekursion
 // z.B. DigitSum(123) = 3 + DigitSum(12)
 func DigitSum(n int) int {
 	//TODO
-	return 0
+	if n < 10 {
+		return n
+	}
+	return n%10 + DigitSum(n/10)
 }

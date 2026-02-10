@@ -8,17 +8,30 @@ import "unicode"
 // unabhängig von Groß- oder Kleinschreibung.
 //
 // Beispiel:
-// input := [][]string{
-//     {"Apfel", "Banane"},
-//     {"Ananas"},
-//     {},
-//     {"Avocado", "Apfel"},
-// }
+//
+//	input := [][]string{
+//	    {"Apfel", "Banane"},
+//	    {"Ananas"},
+//	    {},
+//	    {"Avocado", "Apfel"},
+//	}
+//
 // CountLetterNested(input, 'a') → 7
 // Hinweis: nutze unicode.ToLower()
 // (Achtung: auch große A zählen!)
 func CountLetterNested(nested [][]string, letter rune) int {
 	// TODO: Funktion implementieren (rekursiv oder iterativ möglich)
-	num := unicode.ToLower('0')
-	return int(num) // Platzhalterwert
+	count := 0
+	target := unicode.ToLower(letter)
+
+	for _, inner := range nested {
+		for _, word := range inner {
+			for _, r := range word {
+				if unicode.ToLower(r) == target {
+					count++
+				}
+			}
+		}
+	}
+	return count
 }
