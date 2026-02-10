@@ -5,4 +5,8 @@ package pointer
 // Wenn pp == nil oder *pp == nil, soll nichts passieren.
 func SetThroughDoublePointer(pp **int, v int) {
 	// TODO: implement
+	if pp == nil || *pp == nil {
+		return
+	}
+	**pp = v
 }

@@ -8,12 +8,14 @@ package rekursion
 // SumSlice([]int{1, 2, 3, 4}) → 10
 // SumSlice([]int{5, -2, 7})  → 10
 // SumSlice([]int{})          → 0
-//
 func SumSlice(numbers []int) int {
 	return SumSliceWithCounter(numbers, 0)
 }
 
 func SumSliceWithCounter(numbers []int, counter int) int {
 	//TODO
-	return 0
+	if len(numbers) == 0 {
+		return counter
+	}
+	return SumSliceWithCounter(numbers[1:], counter+numbers[0])
 }

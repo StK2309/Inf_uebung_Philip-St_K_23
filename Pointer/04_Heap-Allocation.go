@@ -5,5 +5,9 @@ package pointer
 // (Nutze new(Person) oder &Person{...})
 func NewPerson(name string, alter int) *Person {
 	// TODO: implement
-	return nil
+	p := &Person{
+		Name:  name,
+		Alter: alter,
+	}
+	return p
 }

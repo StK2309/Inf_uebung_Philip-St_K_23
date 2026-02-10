@@ -5,4 +5,7 @@ package pointer
 // Wenn einer der Pointer nil ist, soll nichts passieren.
 func Swap(a, b *int) {
 	// TODO: implement
+	if a != nil && b != nil {
+		*a, *b = *b, *a
+	}
 }

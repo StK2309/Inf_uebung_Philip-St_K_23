@@ -10,4 +10,7 @@ type Person struct {
 // Wenn p == nil, soll nichts passieren.
 func Birthday(p *Person) {
 	// TODO: implement
+	if p != nil {
+		p.Alter++
+	}
 }

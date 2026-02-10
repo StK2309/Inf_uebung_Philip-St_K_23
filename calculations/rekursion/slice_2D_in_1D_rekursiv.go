@@ -16,18 +16,14 @@ package rekursion
 // Die Funktion soll rekursiv geschrieben werden
 func FlattenRekursiv(nested [][]int) []int {
 	// TODO: Funktion implementieren (rekursiv oder iterativ)
-	var list []int
-
 	if len(nested) == 0 {
-		return list
+		return nil
 	}
-	list = append(nested[0], FlattenRekursiv(nested[1:])...)
-
-	//for _, i := range list {
-	//	if slices.Contains(list, list[i]) {
-	//		list = slices.Delete(list, i, i)
-	//	}
-	//}
-
-	return list
+	return append(nested[0], FlattenRekursiv(nested[1:])...)
 }
+
+//for _, i := range list {
+//	if slices.Contains(list, list[i]) {
+//		list = slices.Delete(list, i, i)
+//	}
+//}

@@ -5,4 +5,7 @@ package pointer
 // Wenn p == nil, soll nichts passieren (keine Panic).
 func DoubleViaPointer(p *int) {
 	//TODO
+	if p != nil {
+		*p *= 2
+	}
 }

@@ -5,5 +5,8 @@ package pointer
 // Sonst returne (*p, true).
 func SafeDeref(p *int) (int, bool) {
 	// TODO: implement
-	return 0, false
+	if p == nil {
+		return 0, false
+	}
+	return *p, true
 }
