@@ -4,5 +4,11 @@ package slices
 // indem es das Slice direkt über den übergebenen Pointer verändert.
 func RemoveNegatives(nums []int) []int {
 	//TODO
-	return nums
+	temp := nums[:0]
+	for _, num := range nums {
+		if num >= 0 {
+			temp = append(temp, num)
+		}
+	}
+	return temp
 }

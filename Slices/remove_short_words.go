@@ -5,5 +5,11 @@ package slices
 // Das Slice wird direkt über einen Pointer verändert.
 func RemoveShortWords(words []string, minLen int) []string {
 	//TODO
-	return words
+	temp := words[:0]
+	for _, word := range words {
+		if len(word) >= minLen {
+			temp = append(temp, word)
+		}
+	}
+	return temp
 }

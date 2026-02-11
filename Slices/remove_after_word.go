@@ -6,5 +6,10 @@ package slices
 // Das Slice wird über einen Pointer übergeben und direkt verändert.
 func CutAfterWord(words []string, target string) []string {
 	// TODO: Funktion implementieren
+	for i, word := range words {
+		if word == target {
+			return words[:i+1]
+		}
+	}
 	return words
 }
