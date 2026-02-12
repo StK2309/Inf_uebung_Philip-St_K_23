@@ -9,3 +9,14 @@ func DoubleViaPointer(p *int) {
 		*p *= 2
 	}
 }
+
+//Speicheradressen / Pointer
+
+//func Pointerquestion() {
+//	a := 8
+//	fmt.Println(&a) // Adressse erwartet
+//	b := &a
+//	fmt.Println(b) // Adresse erwartet
+//	c := *b
+//	fmt.Println(c) // Wert oder Adresse?
+//}
