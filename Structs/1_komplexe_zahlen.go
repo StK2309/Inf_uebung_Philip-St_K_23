@@ -1,5 +1,7 @@
 package structs
 
+import "fmt"
+
 // Struct zur Darstellung einer komplexen Zahl in Komponentenform
 type ComplexNumber struct {
 	Real float64
@@ -8,8 +10,10 @@ type ComplexNumber struct {
 
 // Gibt die komplexe Zahl als String zurück, z. B. "3 + 2i" oder "4 - 1i"
 func (c ComplexNumber) String() string {
-	//TODO
-	return c.String()
+	if c.Imag < 0 {
+		return fmt.Sprintf("%.f - %.fi", c.Real, -c.Imag)
+	}
+	return fmt.Sprintf("%.f + %.fi", c.Real, c.Imag)
 }
 
 // Hilfsfunktion zur Rückgabe des Betrags eines float64
@@ -22,15 +26,18 @@ func abs(x float64) float64 {
 
 // AddComplex addiert zwei komplexe Zahlen (a + bi) + (c + di)
 func AddComplex(a, b ComplexNumber) ComplexNumber {
-	//TODO
-	var l ComplexNumber
-	return l
+	return ComplexNumber{
+		Real: a.Real + b.Real,
+		Imag: a.Imag + b.Imag,
+	}
 }
 
 // MultiplyComplex multipliziert zwei komplexe Zahlen (a + bi) * (c + di)
 // Formel: (ac - bd) + (ad + bc)i
 func MultiplyComplex(a, b ComplexNumber) ComplexNumber {
-	// TODO: Implementiere die Multiplikation von a und b
-	var l ComplexNumber
-	return l
+	return ComplexNumber{
+		Real: a.Real*b.Real - a.Imag*b.Imag,
+		Imag: a.Real*b.Imag + a.Imag*b.Real,
+	}
+
 }

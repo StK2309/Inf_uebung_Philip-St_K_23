@@ -9,5 +9,9 @@ type Rating struct {
 // AverageScore berechnet den Durchschnittswert aller Bewertungen
 func AverageScore(ratings []Rating) float64 {
 	// TODO: Implementieren
-	return 0.1 // Platzhalter
+	var total int = 0
+	for _, ratiratings := range ratings {
+		total += ratiratings.Score
+	}
+	return float64(total) / float64(len(ratings))
 }

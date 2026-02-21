@@ -15,6 +15,17 @@ type Node struct {
 // zum Kopf der Liste.
 func AppendNode(headPtr **Node, value string) {
 	// TODO: Funktion implementieren
+	newNode := &Node{Value: value, Next: nil}
+	if *headPtr == nil {
+		*headPtr = newNode
+	} else {
+		current := *headPtr
+		for current.Next != nil {
+			current = current.Next
+		}
+		current.Next = newNode
+	}
+
 }
 
 // PrintList gibt alle Werte der Liste zeilenweise aus.
